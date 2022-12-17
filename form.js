@@ -1,4 +1,3 @@
-// JavaScript Document
 <script>
 //create a form
 var f = document.createElement("form");
