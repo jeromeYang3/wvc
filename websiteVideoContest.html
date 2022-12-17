@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <style>
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-family: "Raleway", sans-serif
+            }
+
+            .w3-third img {
+                margin-bottom: -6px;
+                opacity: 0.8;
+                cursor: pointer
+            }
+
+            .w3-third img:hover {
+                opacity: 1
+            }
+        </style>
+    </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+        <h3 class="w3-padding-64 w3-center"><b>Website<br>Vide<br>Contest</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Contestant</a>
+        <a href="#score" onclick="w3_close()" class="w3-bar-item w3-button">Score</a>
+        <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Submit</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <span class="w3-left w3-padding">Website Video Contest</span>
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+
+        <!-- Photo grid -->
+        <div class="w3-row">
+            <div class="w3-third">
+                <img src="./ColorOfNight.gif" style="width:100%" onclick="onClick(this)"
+                    alt="./ColorOfNight.gif ">
+                <img src="./GirlFriend.gif" style="width:100%" onclick="onClick(this)"
+                    alt="./GirlFriend.gif">
+                <img src="./HawaiiWeddingSong.gif" style="width:100%" onclick="onClick(this)" alt="./HawaiiWeddingSong.gif">
+            </div>
+
+            <div class="w3-third">
+                <img src="./HeartTrouble1.gif" style="width:100%" onclick="onClick(this)"
+                    alt="./HeartTrouble1.gif">
+                <img src="./HoneyImHome1.gif" style="width:100%" onclick="onClick(this)"
+                    alt="./HoneyImHome1.gif">
+                <img src="./IGotU.gif" style="width:100%" onclick="onClick(this)"
+                    alt="./IGotU.gif">
+            </div>
+
+            <div class="w3-third">
+                <img src="./Immortality.gif" style="width:100%" onclick="onClick(this)" alt="./Immortality.gif">
+                <img src="./people.gif" style="width:100%" onclick="onClick(this)" alt="./people.gif">
+                <img src="https://www.w3schools.com/w3images/closegirl.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!">
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="w3-center w3-padding-32">
+            <div class="w3-bar">
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+                <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+                <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Score section -->
+        <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="score">
+            <h4><b>Score</b></h4>
+            <img src="./ColorOfNight.gif" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+            <div class="w3-content w3-justify" style="max-width:600px">
+                <h4>Score </h4>
+
+      <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-bottom">
+                        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                            <li class="w3-black w3-xlarge w3-padding-32">Contestant</li>
+<li class="w3-padding-16">
+<div class="formRow">
+<label for="title">Contestant video title*</label>
+<input name="custTitle" id="title" type="text"  value="ColorOfNight" />
+</div>
+</li>
+                            <li class="w3-padding-16">
+<div class="formRow">
+<label for="dineSpin">The Score toward the performer artist:</label>
+<input name="dineOut" id="dineSpin" type="number"
+value="60" step="1" min="1" max="99" />
+</div>
+                            </li>
+<div class="formRow">
+<label for="order">Contestant type</label>
+<select name="orderType" id="order">
+<option value="order1">Dancer (Group' Choreographer)</option>
+<option value="order2">Painter (Sculptor)</option>
+<option value="order3" selected>Singer (Group' Composer' Lyric Writer)</option>
+<option value="order4">Show Host (Producer)</option>
+<option value="order5">Author (Writer' Editor)</option>
+</select>
+</div>
+   
+                        </ul>
+                    </div>
+
+                    <div class="w3-half">
+                        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                            <li class="w3-black w3-xlarge w3-padding-32">Your Scoring Sheet</li>
+ <li class="w3-padding-16">
+  <div class="formRow">
+<label for="visit">Date of Scoring</label>
+<input name="visitDate" id="visit" type="date" />
+</div>
+ </li>
+ <li class="w3-padding-16">                                
+ <div class="formRow">
+<label>Do you like to raise your bonus?</label>
+<fieldset class="optGroup">
+<label for="cYes">Yes</label>
+<input name="oCorrect" id="cYes" value="yes"
+type="radio" />
+<label for="cNo">No</label>
+<input name="oCorrect" id="cNo" value="no"
+type="radio" />
+</fieldset>
+</div>
+ </li>
+<li class="w3-padding-16">
+<div class="formRow">
+<label for="bonusSpin">The bonus toward to your performer in amount: $</label>
+<input name="bonusOut" id="bonusSpin" type="number"
+value="1" step="1" min="1" max="9999" />
+</div>
+</li>
+ <li class="w3-padding-16">
+<div class="formRow">
+<label for="name">The bonus toward to your performer artist (group) name:</label>
+<input name="favorName" id="contestantName" type="text" placeholder="ColorOfNight"  />
+</div>
+ </li>
+                            <li class="w3-padding-16">
+                     
+<div class="formRow">
+<label for="phone">Your contact phone*</label>
+<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
+</div>  
+<div class="formRow">
+<label for="mail">E-mail*</label>
+<input name="custEmail" id="mail" type="email" required />
+</div>
+                            </li>
+                            <li class="w3-light-grey w3-padding-24">
+                                <button class="w3-button w3-white w3-padding-large">Submit</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                   <h1> Website Video Contest 2023</h1>
+       
+      <p>Judge viewers (you) who score the top three favorites
+         will be sharing <em>10% of raise bonus</em>. </p>
+      <p>The top three favorite performers
+         will be sharing <em>10% of raise bonus</em>. </p>
+      <p>Judge viewers (you) who score the top 10 best performers
+         will be sharing <em>10% of raise bonus</em>. </p>
+      <p>The top 10 best performers
+         will be sharing <em>10% of raise bonus</em>. </p>
+       <p>All of the video contestant performers
+         will be sharing <em>20% of raise bonus</em>. </p>
+       <p><em>40% of raise bonus</em> will be the producer fund.</p>
+        <p>You will get the concert tickets if you have raised enough bonus
+            for your favorites artist's concert. </p>
+       <p>You will get the album if you have raised enough bonus
+            for your favorites artist's album. </p>
+        <!-- Contact section -->
+        <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+            <div class="w3-content" style="max-width:600px">
+                <h4 class="w3-center"><b>How to join the Contest?</b></h4>
+                <p> Submit and publish your video onto youTubecom, they will check all the copy right and credit issue if you go pass it.
+       Email and send us the url link of your youTuber video, then we will add your video onto our Website Contest.
+                </p>
+
+ 
+<fieldset id="expInfo">
+    <legend>New Contestant</legend>
+    <div class="formRow">
+<label for="join">Date of Join</label>
+<input name="joinDate" id="join" type="date" />
+</div>
+   
+    <div class="formRow">
+<label for="order">Contestant type</label>
+<select name="orderType" id="order">
+<option value="order1">Dancer (Group' Choreographer)</option>
+<option value="order2">Painter (Sculptor)</option>
+<option value="order3" selected>Singer (Group' Composer' Lyric Writer)</option>
+<option value="order4">Show Host (Producer)</option>
+    <option value="order5">Author (Writer' Editor)</option>
+</select>
+</div>
+               
+
+<div class="formRow">
+<label for="name">performer artist (group) name:</label>
+<input name="favorName" id="contestantName" type="text" placeholder="first and last name"  />
+</div>
+     
+<div class="formRow">
+<label for="name">published youTuber url:</label>
+<input name="youTuberUrl" id="youTuber" type="url" placeholder="https://www.youtube.com/watch?v=veuYG9tzAg0"  />
+</div>
+
+     <div class="formRow">
+<label for="phone">contact phone*</label>
+<input name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
+</div>
+     
+<div class="formRow">
+<label for="mail">E-mail*</label>
+<input name="contestantEmail" id="contestant" type="email" required />
+</div>
+</fieldset>
+
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-32 w3-grey">
+            <div class="w3-row-padding">
+                <div class="w3-third">
+                    <h3>INFO</h3>
+                    <p>
+                        This is still a test runing website. But you are very welcome to join us to see how your art production going around.
+       And your Art Production will automatically start over on our next Website Contest when it's ready for real run.
+                        </p>
+                </div>
+
+                <div class="w3-third">
+                    <h3>  <a href="#contact">How to join the contest</a></h3>
+                    <ul class="w3-ul">
+                        <li class="w3-padding-16 w3-hover-black">
+                            <img src="./people.gif" class="w3-left w3-margin-right" style="width:50px">
+                           
+                            <span>  Submit and publish your video onto youTubecom, they will check all the copy right and credit issue if you go pass it.
+       Email and send us the url link of your youTuber video, then we will add your video onto our Website Contest</span>
+                        </li>
+                        <li class="w3-padding-16 w3-hover-black">
+                            <img src="./Immortality.gif" class="w3-left w3-margin-right" style="width:50px">
+                            <span class="w3-large">  <a href="#">Contestant</a> Type</span><br>
+                            <br>
+                            <span>
+Dancer (Group' Choreographer)<br />
+Painter (Sculptor)<br />
+Singer (Group' Composer' Lyric Writer)<br />
+Show Host (Producer)<br />
+Author (Writer' Editor)<br />
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="w3-third">
+                    <h3>   <a href="#">Contestant</a> Type Suggestion Demo</h3>
+                    <span>
+      <a href="#">3D Comics</a> <br />
+      <a href="#">4 in 1 Mv</a> <br />
+       <a href="#">bg Screen</a> <br />
+       <a href="#">mmEBook</a> <br />
+        <a href="https://phenixer.net/">phenixEr.net/</a> <br />
+        <a href="https://phoenixer.net/">phoenixEr.net/</a> <br />
+       </span>
+                </div>
+            </div>
+        </footer>
+
+        <div class="w3-black w3-center w3-padding-24">Made with <a href="https://www.w3schools.com/spaces" title="spaces" target="_blank" class="w3-hover-opacity">W3Schools Spaces</a></div>
+
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
